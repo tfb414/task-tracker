@@ -2,7 +2,7 @@ name: Build and Push Image
 
 on:
   push:
-    branches: [ main ]  # Trigger the workflow on pushes to the main branch
+    branches: [ main ]
 
 jobs:
   build-and-push:
@@ -21,10 +21,14 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
+      - name: Extract version from package.json
+        id: get_version
+        run: echo ::set-output name=VERSION::$(cat package.json | jq .version -r)  # Retrieve version
+
       - name: Build and push image
         uses: docker/build-push-action@v3
         with:
           context: .
           file: ./Dockerfile
           push: true
-          tags: tfb414/tasks:latest
+          tags: tfb414/tasks:${{ steps.get_version.outputs.VERSION }}
