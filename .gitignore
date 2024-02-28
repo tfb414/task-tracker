@@ -1,0 +1,5 @@
+.env
+node_modules
+postgres-data
+.idea
+.DS_Store
