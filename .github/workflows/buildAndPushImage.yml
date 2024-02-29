@@ -23,12 +23,14 @@ jobs:
 
       - name: Extract version from package.json
         id: get_version
-        run: echo ::set-output name=VERSION::$(cat package.json | jq .version -r)  # Retrieve version
+        run: echo ::set-output name=VERSION::$(cat package.json | jq .version -r)
 
-      - name: Build and push image
+      - name: Build and push images
         uses: docker/build-push-action@v3
         with:
           context: .
           file: ./Dockerfile
           push: true
-          tags: tfb414/tasks:${{ steps.get_version.outputs.VERSION }}
+          tags: |
+            tfb414/tasks:${{ steps.get_version.outputs.VERSION }} 
+            tfb414/tasks:latest
