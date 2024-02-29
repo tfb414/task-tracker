@@ -1,7 +1,7 @@
 interface Task {
   id?: number;
   task: string;
-  date: Date;
+  date?: Date;
   person: string;
-  amount: number;
+  amount?: number;
 }

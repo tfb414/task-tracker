@@ -5,7 +5,7 @@ export const createTask = async (taskData: Omit<Task, 'id' | 'completed_at'>): P
   return { id: taskId, ...taskData };
 };
 export const getAllTasks = async (): Promise<Task[]> => {
-  return db('tasks').select(); // Fetch all tasks
+  return db('tasks').select();
 };
 
 export const getTaskById = async (id: string): Promise<Task | undefined> => {
