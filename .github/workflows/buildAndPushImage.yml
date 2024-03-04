@@ -31,6 +31,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
+          platforms: linux/amd64,linux/arm/v7
           tags: |
             tfb414/tasks:${{ steps.get_version.outputs.VERSION }} 
             tfb414/tasks:latest
