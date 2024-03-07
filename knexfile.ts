@@ -1,3 +1,7 @@
+require('dotenv').config();
+
+console.log(process.env.DB_HOST);
+
 module.exports = {
     client: 'pg', // Indicates that you are using PostgreSQL
     connection: {

@@ -5,3 +5,8 @@ export const taskSchema = yup.object().shape({
   task: yup.string().required(),
   amount: yup.number().optional()
 });
+
+export const taskTypeSchema = yup.object().shape({
+  taskName: yup.string().required(),
+  description: yup.string().optional()
+});
