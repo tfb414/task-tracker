@@ -9,7 +9,7 @@ router.post('/', async (req, res) => {
     try {
         const validatedTaskType = await taskTypeSchema.validate(req.body);
         const { success } = await taskTypeService.addTaskType(
-            validatedTaskType.id,
+            validatedTaskType.description,
             validatedTaskType.taskName
         );
 
