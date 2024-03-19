@@ -11,6 +11,6 @@ app.use(express.json()); // Body parsing middleware
 
 app.use('/api', routes);
 
-app.listen(port, '0.0.0.0',() => {
+app.listen(port,() => {
   console.log(`Server listening on port ${port}`);
 });

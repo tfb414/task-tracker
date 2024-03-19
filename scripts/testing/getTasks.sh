@@ -1,1 +1,1 @@
-curl http://localhost:3000/api/tasks
+curl localhost:3000/api/tasks

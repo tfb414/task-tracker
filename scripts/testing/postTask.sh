@@ -1,4 +1,4 @@
-curl -X POST http://localhost:3000/api/tasks \
+curl -X POST http://0.0.0.0:3000/api/tasks \
      -H "Content-Type: application/json" \
      -d '{
           "person": "Alice",

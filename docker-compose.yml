@@ -17,7 +17,7 @@ services:
   tasks:
     image: tfb414/tasks:latest  # Replace with your image name
     ports:
-      - "0.0.0.0:3000:3000"
+      - "3000:3000"
     depends_on:
       - postgres
     environment:

@@ -4,4 +4,5 @@ interface Task {
   date?: Date;
   person: string;
   amount?: number;
+  unit?: string;
 }
