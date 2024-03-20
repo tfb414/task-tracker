@@ -10,7 +10,7 @@
     "typescript": "^5.3.3",
     "yup": "^1.3.3"
   },
-  "version": "1.0.2",
+  "version": "1.0.3",
   "scripts": {
     "start": "ts-node-dev --respawn --transpile-only src/app.ts",
     "build:develop": "bash scripts/buildDevelopmentImageToDockerHub.sh",
