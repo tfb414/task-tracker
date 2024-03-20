@@ -1,4 +1,4 @@
-curl -X POST http://localhost:3000/api/taskTypes \
+curl -X POST http://localhost:9000/api/taskTypes \
      -H "Content-Type: application/json" \
      -d '{
           "taskName": "Daily cleanup",

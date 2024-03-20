@@ -1,1 +1,1 @@
-curl http://localhost:3000/api/taskTypes
+curl http://localhost:9000/api/taskTypes
