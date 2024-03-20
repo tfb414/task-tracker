@@ -18,7 +18,7 @@ COPY . .
 CMD ["npx", "knex", "migrate:latest"]
 
 # Expose the port your application listens on
-EXPOSE 9000
+EXPOSE 3333
 
 # Command to start the application (adjust as needed)
 CMD ["npm", "start"]
