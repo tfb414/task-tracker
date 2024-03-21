@@ -6,8 +6,7 @@ const router = express.Router();
 
 router.post('/', async (req, res) => {
   try {
-    // TODO throw some meaningful errors for the love
-    const validatedTask = await taskSchema.validate(req.body);
+    await taskSchema.validate(req.body);
     const task = await taskService.createTask(req.body);
     res.status(201).json(task);
   } catch (error) {

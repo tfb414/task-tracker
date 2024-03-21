@@ -1,1 +1,1 @@
-curl localhost:3333/api/tasks
+curl 192.168.0.26:3333/api/tasks
