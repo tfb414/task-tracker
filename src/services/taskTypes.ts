@@ -1,9 +1,9 @@
 import db from '../db';
 import {TaskType} from "../models/taskTypes";
 
-export const addTaskType = async (description: string, taskName: string): Promise<{ success: boolean, error?: string }> => {
+export const addTaskType = async (taskName: string): Promise<{ success: boolean, error?: string }> => {
     try {
-        await db('taskTypes').insert({ description, taskName });
+        await db('taskTypes').insert({ taskName });
         return { success: true };
     } catch (error) {
         console.error("Error retrieving task types:", error);
